@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPERGYM</title>
-    <link rel="preload" href="./fonts/Alumni/Alumni Sans SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Alumni/Alumni Sans ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="./img/favicon-32x32.png">
+    <link rel="preload" href="./fonts/Alumni/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Alumni/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Roboto/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Roboto/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Roboto/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="sass/style.scss">
+    <title>SUPERGYM</title>
   </head>
   <body class="page__body">
     <!-- пример использования спрайта -->
@@ -21,7 +23,7 @@
      <main class="main-container">
       <section class="hero" data-test="hero">
         <header class="hero__header header">
-          <svg class="header__logo" width="100" height="20">
+          <svg class="header__logo logo" width="100" height="20">
             <use href="/__spritemap#sprite-logo"></use>
           </svg>
           <a class="header__phone" href="tel:88005555555">8 800 555-55-55</a>
@@ -42,7 +44,7 @@
           <source type="image/webp" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.webp 1x, img/hero-img-desktop@2x.webp 2x" width="500" height="524">
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/hero-img-tablet.webp 1x, img/hero-img-tablet@2x.webp 2x" width="324" height="390">
           <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/hero-img-desktop.jpg 1x, img/hero-img-desktop@2x.jpg 2x" width="500" height="524">
-          <img class="hero__image" media="(min-width: 768px)" src="./img/hero-img-tablet.jpg" srcset="./img/hero-img-tablet@2x.jpg 2x" width="324" height="390" alt="Тренер.">
+          <img class="hero__image" src="./img/hero-img-tablet.jpg" srcset="./img/hero-img-tablet@2x.jpg 2x" width="324" height="390" alt="Тренер.">
         </picture>
       </section>
       <section class="about" data-test="about">
@@ -60,17 +62,18 @@
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/gym-tablet.webp 1x, img/gym-tablet@2x.webp 2x" width="678" height="345">
           <source type="image/webp" srcset="./img/gym-mobile.webp 1x, img/gym-mobile@2x.webp 2x" width="320" height="280">
           <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/gym-desktop.jpg 1x, img/gym-desktop@2x.jpg 2x" width="660" height="400">
-          <source type="image/jpg" media="(min-width: 768px)" srcset="./img/gym-tablet.jpg 1x, img/gym-tablet@2x.jpg" width="678" height="345">
+          <source type="image/jpg" media="(min-width: 768px)" srcset="./img/gym-tablet.jpg 1x, img/gym-tablet@2x.jpg 2x" width="678" height="345">
           <img class="about__image" src="./img/gym-mobile.jpg" srcset="./img/gym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал.">
         </picture>
         <div class="about__container">
-          <iframe class="about__video" src="https://www.youtube.com/embed/9TZXsZItgdw?si=TZ0KEWYYlFsPh4yK" width="320" height="170" title="Бесплатные интерактивные курсы" loading="lazy" allowfullscreen></iframe>
+          <div class="about__video"></div>
+          <!-- <iframe class="about__video" src="https://www.youtube.com/embed/9TZXsZItgdw?si=TZ0KEWYYlFsPh4yK" width="320" height="170" title="Бесплатные интерактивные курсы" loading="lazy" allowfullscreen></iframe> -->
           <picture>
             <source type="image/webp" media="(min-width: 1366px)" srcset="./img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x" width="360" height="230">
             <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x" width="270" height="170">
             <source type="image/webp" srcset="./img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x" width="320" height="170">
             <source type="image/jpg" media="(min-width: 1366px)" srcset="./img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" width="360" height="230">
-            <source type="image/jpg" media="(min-width: 768px)" srcset="./img/video-tablet.jpg 1x, img/video-tablet@2x.jpg" width="270" height="170">
+            <source type="image/jpg" media="(min-width: 768px)" srcset="./img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x" width="270" height="170">
             <img class="about__video-background" src="./img/video-mobile.jpg" srcset="./img/video-mobile@2x.jpg 2x" width="320" height="170" alt="Тренажёрный зал.">
           </picture>
           <button class="about__button" type="button">
@@ -78,7 +81,7 @@
           </button>
         </div>
       </section>
-      <section class="price" data-test="price">
+      <section class="price" id="price" data-test="price">
         <h3 class="price__title title">Абонементы</h3>
         <div class="price__wrapper">
           <a class="price__link price__link--current" href="#" id="one-month">1 месяц</a>
@@ -87,19 +90,19 @@
         </div>
         <div class="price__container">
           <ul class="price__sublist list">
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--1">
               <h4 class="subitem__title">С тренером</h4>
               <span class="subitem__text">12 занятий</span>
               <span class="subitem__cost">5000</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--2">
               <h4 class="subitem__title">Дневной</h4>
               <span class="subitem__text">с 8:00 до 17:00</span>
               <span class="subitem__cost">1700</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--3">
               <h4 class="subitem__title">Полный день</h4>
               <span class="subitem__text">с 8:00 до 22:00</span>
               <span class="subitem__cost">2700</span>
@@ -107,19 +110,19 @@
             </li>
           </ul>
           <ul class="price__sublist list">
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--4">
               <h4 class="subitem__title">С тренером</h4>
               <span class="subitem__text">12 занятий</span>
               <span class="subitem__cost">30000</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--5">
               <h4 class="subitem__title">Дневной</h4>
               <span class="subitem__text">с 8:00 до 17:00</span>
               <span class="subitem__cost">10200</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--6">
               <h4 class="subitem__title">Полный день</h4>
               <span class="subitem__text">с 8:00 до 22:00</span>
               <span class="subitem__cost">16200</span>
@@ -127,19 +130,19 @@
             </li>
           </ul>
           <ul class="price__sublist list">
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--7">
               <h4 class="subitem__title">С тренером</h4>
               <span class="subitem__text">12 занятий</span>
               <span class="subitem__cost">60000</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--8">
               <h4 class="subitem__title">Дневной</h4>
               <span class="subitem__text">с 8:00 до 17:00</span>
               <span class="subitem__cost">20400</span>
               <a class="subitem__link button button--primary" href="#">Купить абонемент</a>
             </li>
-            <li class="price__subitem subitem">
+            <li class="price__subitem subitem subitem--9">
               <h4 class="subitem__title">Полный день</h4>
               <span class="subitem__text">с 8:00 до 22:00</span>
               <span class="subitem__cost">32400</span>
@@ -166,9 +169,15 @@
         <div class="juri__wrapper">
           <button class="juri__button juri__button--prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
+            <svg class="juri__icon" width="16" height="32" aria-hidden="true">
+              <use href="/__spritemap#sprite-arrow"></use>
+            </svg>
           </button>
           <button class="juri__button juri__button--next" type="button">
             <span class="visually-hidden">Следующий слайд</span>
+            <svg class="juri__icon" width="16" height="32" aria-hidden="true">
+              <use href="/__spritemap#sprite-arrow"></use>
+            </svg>
           </button>
           <ul class="juri__list list">
             <li class="juri__item">
@@ -257,7 +266,7 @@
           </li>
         </ul>
       </section>
-      <section class="offers" data-test="offers">
+      <section class="offers" id="offers" data-test="offers">
         <h3 class="offers__title title">Акции</h3>
         <ul class="offers__list list">
           <li class="offers__item">
@@ -266,180 +275,235 @@
               <span>4999</span>
               <p>Безлимитный абонемент в тренажёрный зал</p>
             </div>
-            <a href="#">подробнее</a>
+            <a class="offers__link offers__link--baner" href="#">подробнее</a>
           </li>
           <li class="offers__item">
             <div>
               <h4>Месяц бесплатно</h4>
               <p>Приведи друга, получи абонемент в подарок</p>
             </div>
-            <a href="#">подробнее</a>
+            <a class="offers__link" href="#">подробнее</a>
           </li>
           <li class="offers__item">
             <div>
               <h4>Скидка 20%</h4>
               <p>Корпоративный фитнес с командой</p>
             </div>
-            <a href="#">подробнее</a>
+            <a class="offers__link" href="#">подробнее</a>
           </li>
         </ul>
       </section>
       <section class="faq" data-test="faq">
         <h3 class="faq__title title">Вопросы и ответы</h3>
-        <div class="faq__wrapper">
-          <a class="faq__link faq__link--current" href="#">Центр</a>
-          <a class="faq__link" href="#">Абонемент</a>
-          <a class="faq__link" href="#">Услуги</a>
-          <a class="faq__link" href="#">Правила</a>
-        </div>
-        <ul class="faq__sublist faq__sublist--center list">
-          <li class="faq__subitem">
-            <div>
-              <h4>Как стать членом фитнес-центра?</h4>
-              <button class="faq__button faq__button--less-info" type="button">
-                <span class="visually-hidden">Меньше информации</span>
-              </button>
-            </div>
-            <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента
+        <div class="faq__container">
+          <div class="faq__wrapper">
+            <a class="faq__link faq__link--current" href="#">Центр</a>
+            <a class="faq__link" href="#">Абонемент</a>
+            <a class="faq__link" href="#">Услуги</a>
+            <a class="faq__link" href="#">Правила</a>
+          </div>
+          <ul class="faq__sublist faq__sublist--center list">
+            <li class="faq__subitem">
+              <div>
+                <h4>Как стать членом фитнес-центра?</h4>
+                <button class="faq__button faq__button--less-info" type="button">
+                  <span class="visually-hidden">Меньше информации</span>
+                  <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                    <use href="/__spritemap#sprite-minus"></use>
+                  </svg>
+                </button>
+              </div>
+              <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента
                 онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Где можно посмотреть расписание?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-            <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить
-                подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Есть кулеры в центре? Предоставляются полотенца?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Сколько тренеров работает в клубе и какова их квалификация?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-        </ul>
-        <ul class="faq__sublist faq__sublist--subscription list">
-          <li class="faq__subitem">
-            <div>
-              <h4>Занятия с тренером входят в абонемент?</h4>
-              <button class="faq__button faq__button--less-info" type="button">
-                <span class="visually-hidden">Меньше информации</span>
-              </button>
-            </div>
-            <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный
-                тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Можно ли заморозить абонемент?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Что такое семейный доступ и доступ для друзей?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-        </ul>
-        <ul class="faq__sublist faq__sublist--services list">
-          <li class="faq__subitem">
-            <div>
-              <h4>Предлагает ли клуб услуги по консультированию по вопросам питания?</h4>
-              <button class="faq__button faq__button--less-info" type="button">
-                <span class="visually-hidden">Меньше информации</span>
-              </button>
-            </div>
-            <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и
-                предложит программу питания.</p>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Проводятся ли в клубе какие-либо мероприятия  или соревнования?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Можно ли приобрести в центре спортивное питание?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Есть ли в центре детская комната?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-        </ul>
-        <ul class="faq__sublist faq__sublist--rules list">
-          <li class="faq__subitem">
-            <div>
-              <h4>Есть в фитнес-центре дресс-код?</h4>
-              <button class="faq__button faq__button--less-info" type="button">
-                <span class="visually-hidden">Меньше информации</span>
-              </button>
-            </div>
-            <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части
-                тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности,
-                запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы
-                (например, йога, пилатес).</p>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Можно ли приводить с собой детей на тренировки?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Какие дополнительные правила посещения центра?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-          <li class="faq__subitem">
-            <div>
-              <h4>Нужна ли медицинская справка для посещения залов и бассейна?</h4>
-              <button class="faq__button faq__button--more-info" type="button">
-                <span class="visually-hidden">Больше информации</span>
-              </button>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li class="faq__subitem">
+              <div>
+                <h4>Где можно посмотреть расписание?</h4>
+                <button class="faq__button faq__button--less-info" type="button">
+                  <span class="visually-hidden">Меньше информации</span>
+                  <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                    <use href="/__spritemap#sprite-minus"></use>
+                  </svg>
+                </button>
+              </div>
+            <!--<p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить
+                подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>-->
+            </li>
+            <li class="faq__subitem">
+              <div>
+                <h4>Есть кулеры в центре? Предоставляются полотенца?</h4>
+                <button class="faq__button faq__button--more-info" type="button">
+                  <span class="visually-hidden">Больше информации</span>
+                  <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="faq__subitem">
+              <div>
+                <h4>Сколько тренеров работает в клубе и какова их квалификация?</h4>
+                <button class="faq__button faq__button--more-info" type="button">
+                  <span class="visually-hidden">Больше информации</span>
+                  <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        <!--<ul class="faq__sublist faq__sublist--subscription list">
+              <li class="faq__subitem">
+                <div>
+                  <h4>Занятия с тренером входят в абонемент?</h4>
+                  <button class="faq__button faq__button--less-info" type="button">
+                    <span class="visually-hidden">Меньше информации</span>
+                    <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                      <use href="/__spritemap#sprite-minus"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует
+                  дежурный
+                  тренер, которому можно задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения
+                  упражнения.</p>
+              </li>
+              <li class="faq__subitem">
+                <div>
+                  <h4>Можно ли заморозить абонемент?</h4>
+                  <button class="faq__button faq__button--more-info" type="button">
+                    <span class="visually-hidden">Больше информации</span>
+                    <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                      <use href="/__spritemap#sprite-plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="faq__subitem">
+                <div>
+                  <h4>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h4>
+                  <button class="faq__button faq__button--more-info" type="button">
+                    <span class="visually-hidden">Больше информации</span>
+                    <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                      <use href="/__spritemap#sprite-plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="faq__subitem">
+                <div>
+                  <h4>Что такое семейный доступ и доступ для друзей?</h4>
+                  <button class="faq__button faq__button--more-info" type="button">
+                    <span class="visually-hidden">Больше информации</span>
+                    <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                      <use href="/__spritemap#sprite-plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              </ul>
+              <ul class="faq__sublist faq__sublist--services list">
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Предлагает ли клуб услуги по консультированию по вопросам питания?</h4>
+                    <button class="faq__button faq__button--less-info" type="button">
+                      <span class="visually-hidden">Меньше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-minus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели
+                    и
+                    предложит программу питания.</p>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Проводятся ли в клубе какие-либо мероприятия  или соревнования?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Можно ли приобрести в центре спортивное питание?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Есть ли в центре детская комната?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <ul class="faq__sublist faq__sublist--rules list">
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Есть в фитнес-центре дресс-код?</h4>
+                    <button class="faq__button faq__button--less-info" type="button">
+                      <span class="visually-hidden">Меньше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-minus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя
+                    части
+                    тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности,
+                    запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные
+                    классы
+                    (например, йога, пилатес).</p>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Можно ли приводить с собой детей на тренировки?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Какие дополнительные правила посещения центра?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="faq__subitem">
+                  <div>
+                    <h4>Нужна ли медицинская справка для посещения залов и бассейна?</h4>
+                    <button class="faq__button faq__button--more-info" type="button">
+                      <span class="visually-hidden">Больше информации</span>
+                      <svg class="faq__icon" width="14" height="14" aria-hidden="true">
+                        <use href="/__spritemap#sprite-plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+              </ul>-->
+        </div>
       </section>
       <section class="reviews" data-test="reviews">
         <h3 class="reviews__title title">Отзывы</h3>
@@ -510,42 +574,50 @@
         </div>
       </section>
       <footer class="footer" data-test="footer">
-        <picture>
-          <source media="(min-width: 1366px)" srcset="./img/sprite/logo.svg" type="image/svg+xml" width="130" height="26">
-          <source media="(min-width: 768px)" srcset="./img/sprite/logo.svg" type="image/svg+xml" width="110" height="22">
-          <img class="footer__logo" src="./img/sprite/logo.svg" width="100" height="20" alt="Логотип SUPERGYM.">
-        </picture>
+        <svg class="footer__logo logo" width="100" height="20">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
         <nav class="footer__nav">
           <ul class="footer__list list">
-            <li class="footer__item">Услуги</li>
-            <li class="footer__item">Абонементы</li>
-            <li class="footer__item">Акции</li>
-            <li class="footer__item">Тренеры</li>
-            <li class="footer__item">Расписание</li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Услуги</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#price">Абонементы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#offers">Акции</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Тренеры</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Расписание</a>
+            </li>
           </ul>
         </nav>
         <ul class="footer__social-list social-list list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vkontakte" href="#">
               <span class="visually-hidden">Мы в ВКонтакте</span>
-              <svg width="25" height="25" aria-hidden="true">
-                <use href="#"></use>
+              <svg class="social-list__icon" width="14" height="14" aria-hidden="true">
+                <use href="/__spritemap#sprite-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--ok" href="#">
               <span class="visually-hidden">Мы в Одноклассниках</span>
-              <svg width="25" height="25" aria-hidden="true">
-                <use href="#"></use>
+              <svg class="social-list__icon" width="14" height="14" aria-hidden="true">
+                <use href="/__spritemap#sprite-ok"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--reddit" href="#">
               <span class="visually-hidden">Мы в Reddit</span>
-              <svg width="25" height="25" aria-hidden="true">
-                <use href="#"></use>
+              <svg class="social-list__icon" width="14" height="14" aria-hidden="true">
+                <use href="/__spritemap#sprite-reddit"></use>
               </svg>
             </a>
           </li>

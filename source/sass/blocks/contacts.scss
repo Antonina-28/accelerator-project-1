@@ -7,13 +7,15 @@
   color: $base-primary;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 164px;
+    padding: 0;
+    margin-top: 60px;
     grid-template-columns: 440px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 477px;
     padding: 0;
+    margin-top: 0;
   }
 }
 

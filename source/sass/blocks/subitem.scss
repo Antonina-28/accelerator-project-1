@@ -23,7 +23,7 @@
   font-family: $secondary-font;
   font-weight: 300;
   line-height: 22px;
-  margin-bottom: 65px;
+  margin-bottom: 64px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 82px;
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   font-family: $secondary-font;
   font-weight: 600;
   font-size: 48px;
@@ -59,16 +59,60 @@
   }
 }
 
-// .subitem:nth-child(1) .subitem__cost::before {
-//   position: absolute;
-//   content: "5000";
-//   font-size: 80px;
-//   font-weight: 700;
-//   line-height: 120px;
-//   text-align: center;
-//   color: rgba(232, 232, 232, 1);
-//   bottom: 0;
-// }
+.subitem::before {
+  position: absolute;
+  font-family: $secondary-font;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120px;
+  text-align: center;
+  color: rgba(232, 232, 232, 1);
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+    line-height: 150px;
+    top: 50%;
+  }
+}
+
+.subitem--1::before {
+  content: "5000";
+}
+
+.subitem--2::before {
+  content: "1700";
+}
+
+.subitem--3::before {
+  content: "2700";
+}
+
+.subitem--4::before {
+  content: "30000";
+}
+
+.subitem--5::before {
+  content: "10200";
+}
+
+.subitem--6::before {
+  content: "16200";
+}
+
+.subitem--7::before {
+  content: "60000";
+}
+
+.subitem--8::before {
+  content: "20400";
+}
+
+.subitem--9::before {
+  content: "32400";
+}
 
 .subitem__cost::after {
   display: block;

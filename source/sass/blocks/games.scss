@@ -115,7 +115,12 @@
 .games__term {
   border-bottom: 1px solid $base-white;
   font-weight: 300;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  padding-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 1px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 7px;
@@ -132,7 +137,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 8px;
@@ -142,7 +147,12 @@
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 19px;
-    letter-spacing: 1.4px;
+  }
+}
+
+.games__description:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
   }
 }
 

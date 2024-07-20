@@ -1,14 +1,14 @@
 .about {
   font-family: $secondary-font;
   padding-top: 40px;
-  padding-bottom: 34px;
+  padding-bottom: 40px;
   display: grid;
   grid-template-columns: 320px;
   justify-content: center;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 60px 45px 84px;
+    padding: 61px 45px 84px;
     display: block;
     text-align: center;
   }
@@ -43,7 +43,7 @@
   margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {
@@ -130,6 +130,8 @@
 
 .about__video {
   border: none;
+  width: 320px;
+  height: 170px;
 
   @media (min-width: $tablet-width) {
     width: 270px;
@@ -150,23 +152,108 @@
 
 .about__button {
   position: absolute;
-  top: 48%;
+  top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
-  border: none;
+  border-radius: 50%;
   width: 72px;
   height: 72px;
   background-color: transparent;
-  background-image: url("../../img/sprite/player-button.svg");
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet-width) {
-    top: 50%;
-  }
+  border: 2px solid rgba(237, 2, 51, 0.2);
 
   @media (min-width: $desktop-width) {
+    top: 48%;
     width: 100px;
     height: 100px;
-    background-size: 100px 100px;
+  }
+}
+
+.about__button::after {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #d10a42 15%, #00359f 100%);
+
+  @media (min-width: $desktop-width) {
+    width: 72px;
+    height: 72px;
+    bottom: 12px;
+  }
+}
+
+.about__button::before {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $base-white;
+  mask-image: url("../__spritemap#sprite-play-view");
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    top: 51%;
+  }
+}
+
+.about__button:hover {
+  border: 2px solid rgba(16, 38, 84, 0.6);
+
+  &:hover::after {
+    background: $base-white;
+  }
+
+  &:hover::before {
+    background-color: rgba(16, 38, 84, 0.6);
+  }
+}
+
+.about__button:focus {
+  border: 2px solid $base-primary;
+  background-color: $base-white;
+
+  &:focus::after {
+    background: #c8c9cc;
+  }
+
+  &:focus::before {
+    background-color: $base-primary;
+  }
+}
+
+.about__button:active {
+  border: 2px solid $base-primary;
+
+  &:active::after {
+    width: 58px;
+    height: 58px;
+    bottom: 19px;
+    background: $base-white;
+  }
+
+  &:active::before {
+    background-color: $base-primary;
+  }
+}
+
+.about__button:disabled {
+  border: 2px solid $base-primary;
+  background-color: $base-white;
+  opacity: 0.4;
+
+  &:disabled::after {
+    background: $base-white;
+  }
+
+  &:disabled::before {
+    background-color: $base-primary;
   }
 }

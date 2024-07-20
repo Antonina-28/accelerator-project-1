@@ -1,12 +1,12 @@
 .features {
   font-family: $secondary-font;
   padding-top: 40px;
-  padding-bottom: 43px;
+  padding-bottom: 41px;
   background-color: $background-secondary;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px;
+    padding: 61px 45px 60px;
     padding-bottom: 20px;
   }
 
@@ -20,7 +20,7 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 }
 
@@ -98,7 +98,7 @@
 .features__item h4 {
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -115,6 +115,7 @@
 
 .features__item p {
   padding: 0 43px;
+  line-height: 21px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -125,7 +126,7 @@
 
 .features__item:nth-child(3) {
   padding: 30px 10px 40px;
-  margin-top: 6px;
+  margin-top: 5px;
   margin-bottom: 6px;
   background-color: $background-additional;
   color: $base-white;
@@ -162,7 +163,7 @@
   color: $base-white;
   font-size: 22px;
   line-height: 22px;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;

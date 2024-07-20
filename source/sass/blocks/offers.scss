@@ -8,6 +8,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 60px 45px;
+    padding-bottom: 32px;
     grid-template-columns: 678px;
   }
 
@@ -55,7 +56,7 @@
   align-items: center;
   justify-content: space-between;
   border: 7px solid;
-  border-image: linear-gradient(to bottom right, #d10a42 30%, #00359f 70%);
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 1;
 
   @media (min-width: $tablet-width) {
@@ -104,7 +105,7 @@
 
 .offers__item p {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.8px;
@@ -116,12 +117,13 @@
   }
 }
 
-.offers__item a {
+.offers__link {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 14px;
   font-weight: 700;
-  padding-bottom: 3px;
+  padding-top: 10px;
+  padding-bottom: 4px;
   border-bottom: 1px solid $background-additional;
   color: $background-additional;
 }
@@ -215,7 +217,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    padding-bottom: 135px;
+    padding-bottom: 125px;
     margin-top: 40px;
     font-size: 18px;
     line-height: 24px;
@@ -227,7 +229,7 @@
   }
 }
 
-.offers__item:nth-child(1) a {
+.offers__item:nth-child(1) .offers__link {
   color: $base-white;
   border-bottom: 1px solid $base-white;
   padding-bottom: 3px;
@@ -237,10 +239,6 @@
     padding-bottom: 4px;
     margin-bottom: 0;
   }
-}
-
-.offers__item:nth-child(2) a {
-  padding-bottom: 4px;
 }
 
 .offers__item:nth-child(2) {
@@ -266,5 +264,39 @@
 }
 
 .offers__item:nth-child(3) p {
-  margin-bottom: 21px;
+  margin-bottom: 10px;
+}
+
+.offers__link:hover {
+  opacity: 0.8;
+}
+
+.offers__link:focus {
+  border: none;
+  padding: 10px;
+  outline: 1px solid $background-additional;
+  margin: 0 -11px -5px;
+}
+
+.offers__link:active {
+  opacity: 1;
+}
+
+.offers__link:disabled {
+  opacity: 0.3;
+}
+
+.offers__link--baner:focus {
+  border: none;
+  padding: 10px;
+  outline: 1px solid $base-white;
+  margin: 0 -11px -5px;
+}
+
+.offers__link--baner:active {
+  opacity: 1;
+}
+
+.offers__link--baner:disabled {
+  opacity: 0.5;
 }

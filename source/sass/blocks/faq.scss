@@ -1,11 +1,35 @@
 .faq {
-  padding: 71px 15px 0;
+  padding: 71px 15px 70px;
   background-color: $background-secondary;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 103px;
+    text-align: left;
+  }
 }
 
 .faq__title {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.faq__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 260px 860px;
+  }
 }
 
 .faq__wrapper {
@@ -14,6 +38,10 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .faq__link {
@@ -25,6 +53,14 @@
   line-height: 16px;
   text-decoration: none;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    padding: 18px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 
 .faq__link:hover,
@@ -34,12 +70,14 @@
 
 .faq__link:active {
   border: 1px solid;
-  background: linear-gradient(to right, #d10a42 15%, #00359f 100%);
+  background: linear-gradient(97.05deg, #d10a42 17.6%, #00359f 95.31%);
   color: $base-white;
 }
 
-.faq__sublist {
-  margin-bottom: 70px;
+.faq__link--current {
+  border: transparent;
+  background: linear-gradient(97.05deg, #d10a42 17.6%, #00359f 95.31%);
+  color: $base-white;
 }
 
 .faq__subitem:last-child {
@@ -51,6 +89,10 @@
   text-align: left;
   padding-top: 20px;
   border-top: 1px solid #74819c;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
 }
 
 .faq__subitem div {
@@ -63,14 +105,34 @@
   width: 238px;
   font-weight: 400;
   font-size: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    font-size: 22px;
+    line-height: 22px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin-bottom: 9px;
+  }
+}
+
+.faq__subitem:nth-child(1) h4 {
+  padding-right: 22px;
 }
 
 .faq__subitem p {
   width: 238px;
   margin: 0;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   font-weight: 300;
   font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 23px;
+  }
 }
 
 .faq__button {
@@ -78,19 +140,47 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
+  border: 1px solid $background-additional;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
+  color: $base-primary;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    top: 49%;
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.faq__button--less-info {
-  background-image: url("../__spritemap#sprite-button-min-info-view");
+.faq__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-.faq__button--more-info {
-  background-image: url("../__spritemap#sprite-button-more-info-view");
+.faq__button:hover {
+  background-color: $background-additional;
+  color: $base-white;
+}
+
+.faq__button:focus {
+  background-color: #74819c;
+  color: $base-white;
+}
+
+.faq__button:active {
+  background-color: $background-additional;
+  color: $base-white;
+}
+
+.faq__button:disabled {
+  opacity: 0.3;
 }
