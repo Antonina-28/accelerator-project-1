@@ -31,24 +31,8 @@
 }
 
 .reviews__wrapper {
+  max-width: 560px;
   position: relative;
-}
-
-.reviews__button {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-    position: absolute;
-    top: 44%;
-    border: none;
-    background-color: transparent;
-    width: 16px;
-    height: 32px;
-    background-image: url("../../img/sprite/arrow.svg");
-    background-repeat: no-repeat;
-    background-size: 16px 32px;
-  }
 }
 
 .reviews__button--prev {
@@ -70,6 +54,14 @@
 
   @media (min-width: $desktop-width) {
     right: -105px;
+  }
+}
+
+.reviews__list {
+  width: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
   }
 }
 

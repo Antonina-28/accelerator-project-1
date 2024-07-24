@@ -143,3 +143,23 @@
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
+.subitem:hover,
+.subitem:focus {
+  border: 7px solid;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border-image-slice: 1;
+  box-sizing: border-box;
+
+  &:hover .subitem__link {
+    border: 2px solid;
+    color: $base-white;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  }
+
+  &:focus .subitem__link {
+    border: 2px solid;
+    color: $base-white;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  }
+}

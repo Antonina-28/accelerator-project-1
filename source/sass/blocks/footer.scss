@@ -1,10 +1,22 @@
 .footer {
-  padding: 40px 15px;
   background-color: $background-footer;
   color: $base-white;
   display: grid;
   justify-content: center;
-  grid-template-columns: 290px;
+  grid-template-columns: 320px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1366px;
+  }
+}
+
+.footer__wrapper {
+  padding: 40px 15px;
+  display: grid;
   gap: 30px;
 
   @media (min-width: $tablet-width) {
