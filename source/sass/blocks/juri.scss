@@ -42,11 +42,20 @@
     transform: rotate(180deg) translateY(54%);
     left: -71px;
   }
+
+  @media (min-width: $desktop-width) {
+    transform: rotate(180deg) translateY(55%);
+    left: -70px;
+  }
 }
 
 .juri__button--next {
   @media (min-width: $tablet-width) {
     right: -71px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -72px;
   }
 }
 
@@ -63,6 +72,7 @@
 }
 
 .juri__item {
+  cursor: pointer;
   position: relative;
   min-width: 300px;
 

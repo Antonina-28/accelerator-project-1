@@ -3,8 +3,18 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import './video';
-import './price-tabs';
-import './juri-swiper';
-import './faq-tabs';
+import { playVideo } from './video';
+import { flippingPriceTabs } from './price-tabs';
+import { flippingThroughTheSlider } from './juri-swiper';
+import { initTabs } from './faq-tabs';
+import { vaildateForm } from './form-validation';
 import './reviews-swiper';
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  playVideo();
+  flippingPriceTabs();
+  flippingThroughTheSlider();
+  initTabs();
+  vaildateForm();
+});

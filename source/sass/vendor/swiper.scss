@@ -10,7 +10,7 @@
  * Released on: July 15, 2024
  */
 
- $themeColor: #007aff !default;
+  $themeColor: #007aff !default;
 
 @at-root {
   @font-face {
@@ -249,5 +249,8 @@
 }
 /* Slide styles end */
 
-
-
+.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}

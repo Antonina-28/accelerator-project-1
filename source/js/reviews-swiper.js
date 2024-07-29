@@ -3,10 +3,7 @@ import { Swiper } from './vendor/swiper';
 const optionsReviews = {
   slidesPerView: 1,
   spaceBetween: 10,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  loop: false,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -14,42 +11,46 @@ const optionsReviews = {
     },
     768: {
       slidesPerView: 1,
+      width: 500,
       spaceBetween: 40
     },
     1366: {
-      slidesPerView: 1,
-      spaceBetween: 40
+      width: 560
     }
+  },
+  navigation: {
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev',
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+const swiperReviews = new Swiper('#swiper-reviews', optionsReviews);
 
-  const swiperReviews = new Swiper('#swiper-reviews', optionsReviews);
+const buttonSwiperPrevious = document.querySelector('.swiper-buttons-reviews .reviews__button--prev');
+const buttonSwiperNext = document.querySelector('.swiper-buttons-reviews .reviews__button--next');
 
-  const buttonSwiperPrevious = document.querySelector('.swiper-buttons-reviews .swiper-button-prev');
+function checkNavButtons() {
+  if (swiperReviews.isBeginning) {
+    buttonSwiperPrevious.classList.add('swiper-button-disabled');
+  } else {
+    buttonSwiperPrevious.classList.remove('swiper-button-disabled');
+  }
 
-  buttonSwiperPrevious.addEventListener('click', () => {
-    // if (this.isEnd) {
-    //   // Если текущий слайд - последний, блокируем кнопку
-    //   document.querySelector('.swiper-buttons-reviews .swiper-button-prev').disabled = true;
-    // } else {
-    //   // Иначе разблокируем кнопку
-    //   document.querySelector('.swiper-buttons-reviews .swiper-button-prev').disabled = false;
-    // }
-    swiperReviews.slidePrev(500, false);
-  });
+  if (swiperReviews.isEnd) {
+    buttonSwiperNext.classList.add('swiper-button-disabled');
+  } else {
+    buttonSwiperNext.classList.remove('swiper-button-disabled');
+  }
+}
 
-  const buttonSwiperNext = document.querySelector('.swiper-buttons-reviews .swiper-button-next');
+checkNavButtons();
 
-  buttonSwiperNext.addEventListener('click', () => {
-    // if (this.isEnd) {
-    //   // Если текущий слайд - последний, блокируем кнопку
-    //   document.querySelector('.swiper-buttons-reviews .swiper-button-next').disabled = true;
-    // } else {
-    //   // Иначе разблокируем кнопку
-    //   document.querySelector('.swiper-buttons-reviews .swiper-button-next').disabled = false;
-    // }
-    swiperReviews.slideNext(500, false);
-  });
+swiperReviews.on('slideChange', checkNavButtons);
+
+buttonSwiperPrevious.addEventListener('click', () => {
+  swiperReviews.slidePrev(500, false);
+});
+
+buttonSwiperNext.addEventListener('click', () => {
+  swiperReviews.slideNext(500, false);
 });

@@ -102,3 +102,21 @@
     padding-bottom: 24px;
   }
 }
+
+.form__text:hover {
+  border-bottom: 1px solid $base-white;
+  color: $base-white;
+}
+
+.form__text:focus {
+  border: 1px solid $base-white;
+  margin: -1px;
+}
+
+.form__text:disabled {
+  opacity: 0.4;
+}
+
+.form__text:user-invalid {
+  border-bottom: 1px solid $error-form;
+}

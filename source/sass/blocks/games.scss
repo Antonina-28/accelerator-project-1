@@ -1,7 +1,6 @@
 .games {
   position: relative;
-  padding: 24px 15px;
-  margin-bottom: 290px;
+  padding: 25px 15px 314px;
   display: grid;
   grid-template-columns: 290px;
   justify-content: center;
@@ -24,7 +23,7 @@
   position: absolute;
   content: "";
   display: block;
-  bottom: -266px;
+  top: 345px;
   left: 50%;
   transform: translateX(-50%);
   width: 290px;
@@ -90,6 +89,7 @@
   font-weight: 600;
 
   @media (min-width: $desktop-width) {
+    margin-top: 1px;
     font-size: 82px;
     line-height: 96px;
   }
@@ -120,6 +120,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 1px;
+    letter-spacing: -0.1px;
   }
 
   @media (min-width: $desktop-width) {
@@ -136,11 +137,12 @@
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   letter-spacing: 0;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+    gap: 6px;
   }
 
   @media (min-width: $desktop-width) {
@@ -152,11 +154,13 @@
 
 .games__description:nth-child(2) {
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    margin-top: -1px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 19px;
+    margin-top: 0;
   }
 }
 
@@ -169,6 +173,11 @@
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 22px;
+    padding-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
   }
 }
 
@@ -182,7 +191,7 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 }
 
@@ -193,6 +202,11 @@
   @media (min-width: $tablet-width) {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 26px;
+    padding-bottom: 24px;
   }
 }
 

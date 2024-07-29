@@ -1,5 +1,5 @@
 .offers {
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 10px;
   text-align: center;
   display: grid;
@@ -7,8 +7,7 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 45px;
-    padding-bottom: 32px;
+    padding: 61px 45px 30px;
     grid-template-columns: 678px;
   }
 
@@ -19,14 +18,14 @@
 }
 
 .offers__title {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 }
 
@@ -60,6 +59,7 @@
   border-image-slice: 1;
 
   @media (min-width: $tablet-width) {
+    padding: 20px;
     width: 324px;
     align-items: flex-start;
     grid-row: 2/3;
@@ -108,12 +108,12 @@
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 300;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.9px;
 
   @media (min-width: $tablet-width) {
     line-height: 24px;
     letter-spacing: 0;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 
@@ -132,7 +132,7 @@
   position: relative;
   background-color: $background-banner;
   color: $base-white;
-  padding-top: 30px;
+  padding-top: 31px;
   padding-bottom: 32px;
   margin-bottom: 400px;
 
@@ -195,7 +195,7 @@
 }
 
 .offers__item:nth-child(1) h4 {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
@@ -225,7 +225,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 120px;
+    padding-bottom: 121px;
   }
 }
 
@@ -282,7 +282,8 @@
   opacity: 1;
 }
 
-.offers__link:disabled {
+// Класс для состояния disabled у ссылки
+.offers__link--disabled {
   opacity: 0.3;
 }
 
@@ -297,6 +298,7 @@
   opacity: 1;
 }
 
-.offers__link--baner:disabled {
+// Класс для состояния disabled у ссылки
+.offers__link--baner-disabled {
   opacity: 0.5;
 }

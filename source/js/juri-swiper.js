@@ -1,4 +1,6 @@
 import { Swiper } from './vendor/swiper';
+const buttonSwiperPrevious = document.querySelector('.swiper-buttons-juri .swiper-button-prev');
+const buttonSwiperNext = document.querySelector('.swiper-buttons-juri .swiper-button-next');
 
 const options = {
   slidesPerView: 1,
@@ -23,19 +25,15 @@ const options = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+export function flippingThroughTheSlider() {
 
   const swiper = new Swiper('#swiper-juri', options);
-
-  const buttonSwiperPrevious = document.querySelector('.swiper-buttons-juri .swiper-button-prev');
 
   buttonSwiperPrevious.addEventListener('click', () => {
     swiper.slidePrev(500, false);
   });
 
-  const buttonSwiperNext = document.querySelector('.swiper-buttons-juri .swiper-button-next');
-
   buttonSwiperNext.addEventListener('click', () => {
     swiper.slideNext(500, false);
   });
-});
+}

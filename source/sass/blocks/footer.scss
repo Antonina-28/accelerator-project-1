@@ -20,22 +20,26 @@
   gap: 30px;
 
   @media (min-width: $tablet-width) {
-    padding: 45px;
-    padding-top: 44px;
+    padding: 43px;
     gap: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 103px;
+    padding: 39px 103px;
+    justify-content: space-between;
   }
 }
 
 .footer__logo {
   @media (min-width: $tablet-width) {
-    margin-bottom: 1px;
+    margin-right: 36px;
+    margin-left: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -54,6 +58,11 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 37px;
+    letter-spacing: -0.01px;
+  }
 }
 
 .footer__item {
@@ -70,7 +79,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 82px;
+    margin-right: 83px;
+  }
+}
+
+.footer__item:nth-child(3),
+.footer__item:nth-child(4) {
+  @media (min-width: $tablet-width) {
+    margin-right: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 83px;
   }
 }
 
@@ -95,7 +115,8 @@
   color: $base-white;
 }
 
-.footer__link:disabled {
+// Класс для состояния disabled у ссылки
+.footer__link--disabled {
   opacity: 0.4;
 }
 
@@ -105,7 +126,7 @@
 
   @media (min-width: $tablet-width) {
     gap: 15px;
-    padding-top: 1px;
+    padding-top: 2px;
   }
 
   @media (min-width: $desktop-width) {

@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const lists = document.querySelectorAll('.price__sublist');
-  const links = document.querySelectorAll('.price__link');
+const lists = document.querySelectorAll('.price__sublist');
+const links = document.querySelectorAll('.price__link');
 
-  function toggleFaqList(el) {
+export function flippingPriceTabs() {
+  function toggleFaqList(element) {
     links.forEach((el, index) => {
       if (el.classList.contains('price__link--current')) {
         el.classList.remove('price__link--current');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    el.classList.toggle('price__link--current');
+    element.classList.toggle('price__link--current');
   }
 
   links.forEach((el, index) => {
@@ -23,4 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
       lists[index].classList.toggle('price__sublist--current');
     });
   });
-});
+}
