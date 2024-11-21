@@ -29,10 +29,10 @@
   width: 290px;
   height: 290px;
   background-image:
-    image-set(url("../../img/super-games-mobile.webp") 1x type("image/webp"),
-    url("../../img/super-games-mobile.jpg") 1x,
-    url("../../img/super-games-mobile@2x.webp") 2x type("image/webp"),
-    url("../../img/super-games-mobile@2x.jpg") 2x);
+    image-set(url("/img/super-games-mobile.webp") 1x type("image/webp"),
+    url("/img/super-games-mobile.jpg") 1x,
+    url("/img/super-games-mobile@2x.webp") 2x type("image/webp"),
+    url("/img/super-games-mobile@2x.jpg") 2x);
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
@@ -43,10 +43,10 @@
     width: 378px;
     height: 348px;
     background-image:
-      image-set(url("../../img/super-games-tablet.webp") 1x type("image/webp"),
-      url("../../img/super-games-tablet.jpg") 1x,
-      url("../../img/super-games-tablet@2x.webp") 2x type("image/webp"),
-      url("../../img/super-games-tablet@2x.jpg") 2x);
+      image-set(url("/img/super-games-tablet.webp") 1x type("image/webp"),
+      url("/img/super-games-tablet.jpg") 1x,
+      url("/img/super-games-tablet@2x.webp") 2x type("image/webp"),
+      url("/img/super-games-tablet@2x.jpg") 2x);
   }
 
   @media (min-width: $desktop-width) {
@@ -55,10 +55,10 @@
     width: 660px;
     height: 500px;
     background-image:
-      image-set(url("../../img/super-games-desktop.webp") 1x type("image/webp"),
-      url("../../img/super-games-desktop.jpg") 1x,
-      url("../../img/super-games-desktop@2x.webp") 2x type("image/webp"),
-      url("../../img/super-games-desktop@2x.jpg") 2x);
+      image-set(url("/img/super-games-desktop.webp") 1x type("image/webp"),
+      url("/img/super-games-desktop.jpg") 1x,
+      url("/img/super-games-desktop@2x.webp") 2x type("image/webp"),
+      url("/img/super-games-desktop@2x.jpg") 2x);
   }
 }
 

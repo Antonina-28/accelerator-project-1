@@ -8,10 +8,10 @@
     justify-items: center;
     padding: 61px 194px;
     background-image:
-      image-set(url("../../img/inventory-tablet.webp") 1x type("image/webp"),
-      url("../../img/inventory-tablet.png") 1x,
-      url("../../img/inventory-tablet@2x.webp") 2x type("image/webp"),
-      url("../../img/inventory-tablet@2x.png") 2x);
+      image-set(url("/img/inventory-tablet.webp") 1x type("image/webp"),
+      url("/img/inventory-tablet.png") 1x,
+      url("/img/inventory-tablet@2x.webp") 2x type("image/webp"),
+      url("/img/inventory-tablet@2x.png") 2x);
     background-repeat: no-repeat;
     background-position: bottom -34px right -60px;
   }
@@ -19,10 +19,10 @@
   @media (min-width: $desktop-width) {
     padding: 100px 103px 59px;
     background-image:
-      image-set(url("../../img/inventory-desktop.webp") 1x type("image/webp"),
-      url("../../img/inventory-desktop.png") 1x,
-      url("../../img/inventory-desktop@2x.webp") 2x type("image/webp"),
-      url("../../img/inventory-desktop@2x.png") 2x);
+      image-set(url("/img/inventory-desktop.webp") 1x type("image/webp"),
+      url("/img/inventory-desktop.png") 1x,
+      url("/img/inventory-desktop@2x.webp") 2x type("image/webp"),
+      url("/img/inventory-desktop@2x.png") 2x);
     background-position: bottom -30px right -147px;
   }
 }
