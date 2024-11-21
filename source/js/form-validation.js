@@ -6,7 +6,7 @@ const form = document.querySelector('.form__sending');
 const formButton = document.querySelector('.form__sending .form__button');
 
 function validateName() {
-  const namePattern = /^[a-zA-Z\s]+$/;
+  const namePattern = /^[a-zA-Zа-яА-ЯёЁ]+$/;
   if (!namePattern.test(nameInput.value)) {
     nameInput.classList.add('error');
     insertTextNotification(formItemName, 'Пожалуйста, введите только буквы');
@@ -17,10 +17,10 @@ function validateName() {
 }
 
 function validatePhone() {
-  const phonePattern = /^\+7\d{10}$/;
+  const phonePattern = /^\+\d+$/;
   if (!phonePattern.test(phoneInput.value)) {
     phoneInput.classList.add('error');
-    insertTextNotification(formItemPhone, 'Пожалуйста, введите только цифры в поле Телефон');
+    insertTextNotification(formItemPhone, 'Пожалуйста, введите в формате +78001234567 в поле Телефон');
     return false;
   }
   phoneInput.classList.remove('error');
@@ -38,7 +38,7 @@ function insertTextNotification(el, text) {
   el.appendChild(notitficationElement);
 }
 
-export function vaildateForm() {
+export function validateForm() {
 
   formButton.addEventListener('click', (e) => {
     e.preventDefault();

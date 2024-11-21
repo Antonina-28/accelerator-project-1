@@ -80,6 +80,7 @@
 .faq__link:hover,
 .faq__link:focus {
   border: 1px solid $base-primary;
+  background-color: $base-white;
 }
 
 .faq__link:active {
@@ -122,6 +123,7 @@
   font-family: $secondary-font;
   text-align: left;
   border-top: 1px solid #74819c;
+  cursor: pointer;
 }
 
 .faq__box {
@@ -311,9 +313,17 @@
 .faq__button:hover {
   background-color: $background-additional;
   color: $base-white;
+
+  &::after {
+    background-color: $base-white;
+  }
+
+  &::before {
+    background-color: $base-white;
+  }
 }
 
-.faq__button:focus {
+.faq__button:focus-visible {
   background-color: #74819c;
   color: $base-white;
 }

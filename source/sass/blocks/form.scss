@@ -82,12 +82,23 @@
   color: #74819c;
 }
 
+.form__text.error {
+  border-bottom: 1px solid $error-form;
+}
+
 .form__item {
   margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 36px;
   }
+}
+
+.form__item p {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 22px;
+  color: $error-form;
 }
 
 .form__item:nth-child(2) {

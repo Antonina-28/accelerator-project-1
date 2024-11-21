@@ -7,7 +7,7 @@ import { playVideo } from './video';
 import { flippingPriceTabs } from './price-tabs';
 import { flippingThroughTheSlider } from './juri-swiper';
 import { initTabs } from './faq-tabs';
-import { vaildateForm } from './form-validation';
+import { validateForm } from './form-validation';
 import './reviews-swiper';
 
 
@@ -16,5 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   flippingPriceTabs();
   flippingThroughTheSlider();
   initTabs();
-  vaildateForm();
+  validateForm();
 });

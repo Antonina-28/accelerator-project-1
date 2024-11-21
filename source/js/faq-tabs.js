@@ -58,12 +58,15 @@ export function initTabs() {
     const accordion = accordions[index];
     if (accordion.dataset.accordion === tab.dataset.tab) {
       const buttons = accordion.querySelectorAll('.faq__button');
+      const li = accordion.querySelectorAll('.faq__box');
       buttons.forEach((button, i) => {
         contentBlock = button.nextElementSibling;
+
         if (i === 0) {
           openedFirstContent(contentBlock, button);
         }
-        button.addEventListener('click', () => {
+
+        li[i].addEventListener('click', () => {
 
           contentBlock = button.nextElementSibling;
 
@@ -78,6 +81,7 @@ export function initTabs() {
             button.classList.add(CLOSED_STATE);
             findHeightContent(contentBlock);
           }
+
         });
       });
     }
